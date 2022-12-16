@@ -1,0 +1,130 @@
+:root{
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400;500;700;800&family=Outfit:wght@400;700&display=swap');
+body{
+font-family: 'Open Sans', sans-serif;
+background-color: grey;
+}
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card{
+display: flex;
+max-width: 900px;
+}
+@media (max-width:767px){
+  .card {
+    flex-direction: column;
+  }
+}
+.card .images{
+  max-width: 100%;
+  display: flex;
+
+}
+.card  img{
+  max-width: 100%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.card .text{
+  padding: 30px;
+  background-color: var(--White);
+border-bottom-right-radius: 20px;
+border-top-right-radius: 20px;
+}
+.card .text .test{
+color: var(--Dark-grayish-blue);
+letter-spacing: 8px;
+text-transform: uppercase;
+}
+@media (max-width:767px){
+  .card .text .test{
+    text-align: center;
+  }
+}
+.card .text h1{
+  margin-top: 20px;
+  font-size: 60px;
+  letter-spacing: -2px;
+}
+@media (max-width:767px){
+  .card .text .h1{
+    font-size: 5px;
+    margin-top: 5px;
+  
+  }
+}
+.card .text .par{
+  color: var(--Dark-grayish-blue);
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card .number{
+  display: flex;
+  align-items: center;
+}
+.card .number span:first-child{
+  color: var(--Dark-cyan);
+  font-size: 50px;
+margin-right: 50px;
+font-weight: bold;
+}
+@media(max-width:767px){
+  .card .number span:first-child{
+    font-size: 25px;
+    font-weight: normal;
+  }
+}
+.card .number span:last-child{
+color: var(--Dark-grayish-blue);
+letter-spacing: -1px;
+}
+.card .text a{
+  color: var(--White);
+  background-color: var(--Dark-cyan);
+  text-align: center;
+  text-decoration: none;
+  display:block ;
+  margin-top: 20px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 19px;
+  position: relative; 
+}
+@media (max-width:767px){
+  .card .text a{
+    max-width: 500px;
+  font-weight: normal;
+
+  }
+  .card .text a::after{
+    right: -100px;
+    position: relative;
+  }
+}
+.card .text a::after{
+  content:'\f07a' ;
+  font-weight: 900;
+  font-family: "font Awesome 5 free";
+  position: absolute;
+left: 160px;
+bottom: 23px;
+}
